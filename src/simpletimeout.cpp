@@ -1,5 +1,5 @@
 /*
- * SimpleTimeout class
+ * IntelliTimeout class
  * 
  * @autor: Thomas Winkler
  * @copyright: 2019-11-17
@@ -11,14 +11,14 @@
 
 
 #include <Arduino.h>
-#include "simpletimeout.h"
+#include "intellitimeout.h"
 
 
-SIMPLETIMEOUT::SIMPLETIMEOUT() {
+INTELLITIMEOUT::INTELLITIMEOUT() {
 }
 
 
-void SIMPLETIMEOUT::begin(uint16_t time) {
+void INTELLITIMEOUT::begin(uint16_t time) {
 
 	_timeout = time;
 
@@ -26,19 +26,19 @@ void SIMPLETIMEOUT::begin(uint16_t time) {
 }
 
 
-bool SIMPLETIMEOUT::check(void) {
+bool INTELLITIMEOUT::check(void) {
 
 	return (_last_time + _timeout) < millis();
 }
 
 
-void SIMPLETIMEOUT::retrigger(void) {
+void INTELLITIMEOUT::retrigger(void) {
 
 	_last_time = millis();
 }
 
 
-bool SIMPLETIMEOUT::update(void) {
+bool INTELLITIMEOUT::update(void) {
 
 	if (check()) {
 		retrigger();
@@ -49,7 +49,7 @@ bool SIMPLETIMEOUT::update(void) {
 	return false;
 }
 
-uint32_t SIMPLETIMEOUT::rest(void) {
+uint32_t INTELLITIMEOUT::rest(void) {
 
 	if (millis() < (_last_time + _timeout)) {		
 		return (_last_time + _timeout) - millis();
@@ -58,7 +58,7 @@ uint32_t SIMPLETIMEOUT::rest(void) {
 	return false;
 }
 
-uint8_t SIMPLETIMEOUT::progress(void) {
+uint8_t INTELLITIMEOUT::progress(void) {
 
 	return (millis() - _last_time) * 100 / _timeout;
 }

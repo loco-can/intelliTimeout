@@ -7,14 +7,14 @@
  */
 
 
-#ifndef SIMPLETIMEOUT_H
-#define SIMPLETIMEOUT_H
+#ifndef INTELLITIMEOUT_H
+#define INTELLITIMEOUT_H
 
 
-class SIMPLETIMEOUT {
+class INTELLITIMEOUT {
 
 	public:
-		SIMPLETIMEOUT(void);
+		INTELLITIMEOUT(void);
 
 		void begin(uint16_t); // start timeout with time in ms
 

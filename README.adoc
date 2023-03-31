@@ -1,4 +1,4 @@
-= Simple Timeout library for Arduino =
+= Intelligent Timeout library for Arduino =
 
 The lightweight library provides a simple way to wait for a timeout without blocking the program execution with delay.
 
