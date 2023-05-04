@@ -1,5 +1,5 @@
 /*
- * SimpleTimeout class
+ * IntelliTimeout class
  * 
  * @autor: Thomas Winkler
  * @copyright: 2019-11-17
@@ -7,11 +7,11 @@
  */
 
 
-#include "simpletimeout.h"
+#include "INTELLITIMEOUT.h"
 
 
-SIMPLETIMEOUT timeout1;
-SIMPLETIMEOUT timeout2;
+INTELLITIMEOUT timeout1;
+INTELLITIMEOUT timeout2;
 
 
 void setup(void) {

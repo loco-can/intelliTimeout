@@ -1,5 +1,5 @@
 /*
- * SimpleTimeout class header
+ * IntelliTimeout class header
  * 
  * @autor: Thomas Winkler
  * @copyright: 2019-11-17
